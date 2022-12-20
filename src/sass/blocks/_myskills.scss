@@ -1,0 +1,54 @@
+.myskills { 
+  padding: 120px 0 0 0;
+  &__title {
+    position: relative;
+    text-align: center;
+    @include before_circle;
+    &:before {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__subtitle {
+    text-align: center;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template: repeat(4, 270px) / repeat(4, 270px);
+    grid-auto-rows: minmax(270px, auto);
+    grid-auto-columns: minmax(270px, auto);
+    margin-top: 60px;
+    column-gap: 13px;
+    row-gap: 13px;
+  }
+  &__item {
+    width: 270px;
+    min-height: 270px;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 0 30px;
+      img {
+        max-width: 100%;
+        height: 65px;
+      }  
+    &-subtitle {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 20px;
+    }
+    &-text {
+      width: 211px;
+      margin-top: 15px;
+      font-size: 12px;
+    }
+    .jquery__img {
+      width: 161px;
+    }
+    .mongoDb__img {
+      width: 159px;
+    }
+  }
+}
