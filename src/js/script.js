@@ -10,3 +10,8 @@ hamburger.addEventListener("click", () => {
 closeHamburger.addEventListener("click", (e) => {
   menu.classList.remove("active");
 });
+
+const counters = document.querySelectorAll(".skills__ratings-counter"),
+      lines = document.querySelectorAll(".skills__ratings-line span");
+
+
