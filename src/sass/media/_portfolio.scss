@@ -1,0 +1,39 @@
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .portfolio {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 280px);
+      grid-auto-rows: 280px;
+      justify-content: space-around;
+      row-gap: 35px;
+      .horizontal, .vertical {
+        grid-row: unset;
+        grid-column: unset;
+      }
+    }
+  }
+} 
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  .portfolio {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+}

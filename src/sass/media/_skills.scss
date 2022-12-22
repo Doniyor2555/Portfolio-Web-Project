@@ -6,6 +6,12 @@
     &__items {
       grid-template: repeat(2,minmax(270px,auto))/repeat(3,270px);
     }
+    &__ratings {
+      justify-content: space-between;
+      padding:  0 30px 0 20px;
+      grid-template: repeat(2,minmax(70px,auto))/repeat(auto-fit,350px);
+      grid-auto-rows: minmax(70px, auto);
+    }
   }
 } 
 
@@ -45,6 +51,7 @@
       justify-content: center;
     }
     &__ratings {
+      justify-content: center;
       grid-template: repeat(6, minmax(70px,auto)) / repeat(1,350px);
     }
   }
@@ -68,9 +75,16 @@
       justify-content: center;
     }
     &__ratings {
-      grid-template: repeat(6, minmax(70px,auto)) / repeat(1,350px);
+      // grid-template: repeat(6, minmax(70px,auto)) / repeat(1,350px);
+      grid-auto-columns: repeat(auto-fit, 350px);
+      grid-auto-rows: minmax(70px, auto);
       &-line {
         width: 280px;
+      }
+      &-item {
+        margin-top: -20px;
+        padding-left: 30px;
+        grid-template: minmax(21px,auto) 14px/200px 70px;
       }
     }
   }
