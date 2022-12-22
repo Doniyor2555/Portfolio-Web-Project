@@ -4,6 +4,7 @@ const sass  = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
+const htmlmin = require('gulp-htmlmin');
 
 gulp.task('server', function() {
 
@@ -31,3 +32,9 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles'));
+
+gulp.task('html', function () {
+    return gulp.src("src/*.html")
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest("dist/"));
+});
